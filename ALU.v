@@ -15,7 +15,7 @@ module ALU (
         regB<=b;
         regY<=nextY;
     end
-
+    //MUX 
     always @(*) begin
       case (sel[3])
         0: begin
