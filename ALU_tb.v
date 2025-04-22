@@ -20,9 +20,7 @@ module ALU_tb;
     always #5 clk = ~clk;
 
     // Monitor outputs
-    initial begin
-        $monitor("Time=%0t a=%d b=%d sel=%b y=%d", $time, a, b, sel, y);
-    end
+    
 
     initial begin
         // Initialize
@@ -66,6 +64,9 @@ module ALU_tb;
         // Test Add A + B: A = 3, B = 2 -> Y = 5
         a = 4'd3; b = 4'd2;
         sel = 4'b0110; 
+        #20;
+        
+        sel=4'b0111;
         #20;
 
         // Test Logical Operations (sel[3] = 1)
