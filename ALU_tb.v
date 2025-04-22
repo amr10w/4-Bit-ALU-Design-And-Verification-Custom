@@ -19,7 +19,7 @@ module ALU_tb;
     // Generate clock: 10ns period
     always #5 clk = ~clk;
 
-    // Monitor outputs
+
     
 
     initial begin
