@@ -11,10 +11,16 @@ module ALU (
 
     always @(posedge clk)
     begin
+        regY<=nextY;
+
+    end
+     always @(negedge clk)
+    begin
         regA<=a;
         regB<=b;
-        regY<=nextY;
-    end
+  
+    end 
+      
     //MUX 
     always @(*) begin
       case (sel[3])
@@ -27,13 +33,14 @@ module ALU (
                 3'b100: nextY = regA - 1; // Decrement A
                 3'b101: nextY = regA * regB; // Multiply A and B
                 3'b110: nextY = regA + regB; // Add A and B
+                3'b111: nextY = regA - regB;
                 default: nextY = 8'b00000000;
             endcase
         end
         1:  begin
           case (sel[2:0])
-            3'b000: nextY = ~regA;       // Complement a (1’s complement) 
-            3'b001: nextY = ~regB;       // Complement b (1’s complement)
+            3'b000: nextY = ~regA;       // Complement a (1's complement) 
+            3'b001: nextY = ~regB;       // Complement b (1's complement)
             3'b010: nextY = regA & regB; // AND
             3'b011: nextY = regA | regB; // OR
             3'b100: nextY = regA ^ regB; // XOR
