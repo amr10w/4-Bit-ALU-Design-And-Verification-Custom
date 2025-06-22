@@ -18,13 +18,3 @@ The ALU is explored through multiple design methodologies:
 - FPGA implementation (for real-time hardware deployment)
 
 All modules have been verified through simulation, making this a comprehensive ALU design and verification project.
-## 📖 Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
