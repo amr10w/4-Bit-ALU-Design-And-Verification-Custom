@@ -1,7 +1,7 @@
 
 # 4 Bit ALU Design & Verification throw Semi Custom & Full Custom
 
-A comprehensive digital design project implementing a 4-bit Arithmetic Logic Unit (ALU) using both **semi-custom (RTL + FPGA)** and **full-custom (transistor-level)** design flows. This project includes design, simulation, verification, C++ reference modeling, and FPGA deployment, along with detailed documentation and layout files.
+This is the final project for **ECE 212s – Digital Circuits – Spring 2025** at Ain Shams University, focused on designing, verifying, and implementing a **4-bit Arithmetic and Logic Unit (ALU)** using both **semi-custom** (RTL & FPGA) and **full-custom** (transistor-level with Cadence Virtuoso) methodologies design flows. This project includes design, simulation, verification, C++ reference modeling, and FPGA deployment, along with detailed documentation and layout files.
 
 The design includes:
 
@@ -20,6 +20,33 @@ The ALU is explored through multiple design methodologies:
 - FPGA implementation (for real-time hardware deployment)
 
 All modules have been verified through simulation, making this a comprehensive ALU design and verification project.
+
+---
+
+## 🧠 Project Objective
+
+To design an ALU capable of executing both arithmetic and logical operations as specified by a 4-bit selection line. The ALU uses flip-flops at both inputs and outputs, and its behavior is described as follows:
+
+### ✨ Supported Operations
+
+| Sel (4-bit) | Operation                       | Type      |
+|-------------|----------------------------------|-----------|
+| 0000        | Increment a                      | Arithmetic |
+| 0001        | Increment b                      | Arithmetic |
+| 0010        | Transfer a                       | Arithmetic |
+| 0011        | Transfer b                       | Arithmetic |
+| 0100        | Decrement a                      | Arithmetic |
+| 0101        | Multiply a and b                 | Arithmetic |
+| 0110        | Add a and b                      | Arithmetic |
+| 0111        | Subtract a from b (a > b)        | Arithmetic |
+| 1000        | Complement a (1’s complement)    | Logic     |
+| 1001        | Complement b (1’s complement)    | Logic     |
+| 1010        | AND                              | Logic     |
+| 1011        | OR                               | Logic     |
+| 1100        | XOR                              | Logic     |
+| 1101        | XNOR                             | Logic     |
+| 1110        | NAND                             | Logic     |
+| 1111        | NOR                              | Logic     |
 
 ---
 
